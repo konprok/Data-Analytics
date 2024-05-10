@@ -3,4 +3,6 @@ Repository for Data Analytics excersises.
 - LAB 1 - Random Data Visualisation and Sampling
 - LAB 2 - Intro to stan
 - LAB 3 - Prior and Posterior predictive distributions
-- LAB 4 - Linear models - modelling height of !Kung people
+- LAB 4 - Linear models
+- Lab 5 - Using link functions to create generalized linear models
+- Lab 6 - Model comparison
