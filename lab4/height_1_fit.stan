@@ -1,21 +1,19 @@
-data {
-  int<lower=0> N;  // Liczba próbek
-  real heights[N];  // Wysokości
+data{
+    int N;
+    array[N] real heights;
 }
 
 parameters {
-  real mu;  // Średnia wzrostu
-  real<lower=0> sigma;  // Odchylenie standardowe wzrostu
+   real mu;
+   real<lower=0> sigma;
 }
 
 model {
-  mu ~ normal(170, 10);  // Prior dla średniej wzrostu
-  sigma ~ normal(15, 5);  // Prior dla odchylenia standardowego wzrostu
-  
-  // Likelihood
-  heights ~ normal(mu, sigma);  // Likelihood dla danych wysokości
+   mu ~ normal(178, 20);
+   sigma ~ normal(15,5);
+   heights ~ normal(mu, sigma);
 }
 
 generated quantities {
-  real height_sim = normal_rng(mu, sigma);  // Generowanie wysokości z dopasowanego modelu
+   real height = normal_rng(mu, sigma);
 }
