@@ -27,3 +27,10 @@ model {
   // Likelihood
   y ~ bernoulli_logit(alpha + X[,1] * beta_glucose + X[,2] * beta_age + X[,3] * beta_bmi + X[,4] * beta_bp + X[,5] * beta_insulin + X[,6] * beta_dpf);
 }
+
+generated quantities {
+  vector[N] log_lik;
+  for (i in 1:N) {
+    log_lik[i] = bernoulli_logit_lpmf(y[i] | alpha + X[i,1] * beta_glucose + X[i,2] * beta_age + X[i,3] * beta_bmi + X[i,4] * beta_bp + X[i,5] * beta_insulin + X[i,6] * beta_dpf);
+  }
+}
