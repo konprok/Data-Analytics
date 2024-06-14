@@ -15,7 +15,7 @@ parameters {
 
 model {
   // Priors
-  alpha ~ normal(0, 1);
+  alpha ~ normal(-0.85, 0.1);
   beta_glucose ~ normal(0.4, 0.1);  // Glukoza
   beta_age ~ normal(0.30, 0.1);  // Age
   beta_bmi ~ normal(0.20, 0.1);  //  BMI
