@@ -14,8 +14,8 @@ parameters {
 model {
   // Priors
   alpha ~ normal(-0.3, 1.3);
-  beta_glucose ~ normal(110,25);
-  beta_bmi ~ normal(33,6);
+  beta_glucose ~ normal(120,31);
+  beta_bmi ~ normal(33,7);
   beta_age ~ exponential(0.1);
 
   // Likelihood

@@ -7,8 +7,8 @@ data {
 parameters {
   real alpha;
   real beta_glucose;
-  real beta_age;
   real beta_bmi;
+  real beta_age;
   real beta_bp;
   real beta_insulin;
   real<lower=0> beta_dpf;
@@ -17,11 +17,11 @@ parameters {
 model {
   // Priors
   alpha ~ normal(-0.3, 1.3);
-  beta_glucose ~ normal(110, 25);
+  beta_glucose ~ normal(120, 31);
   beta_age ~ exponential(0.1);
-  beta_bmi ~ normal(33, 6);
-  beta_bp ~ normal(75, 12);
-  beta_insulin ~ normal(130, 70);
+  beta_bmi ~ normal(33, 7);
+  beta_bp ~ normal(70, 12);
+  beta_insulin ~ normal(115, 70);
   beta_dpf ~ normal(0.35, 0.35);
 
   // Likelihood
