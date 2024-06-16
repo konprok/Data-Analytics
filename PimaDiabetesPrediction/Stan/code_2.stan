@@ -11,7 +11,7 @@ parameters {
   real beta_age;
   real beta_bp;
   real beta_insulin;
-  real<lower=0> beta_dpf;
+  real beta_dpf;
 }
 
 model {
