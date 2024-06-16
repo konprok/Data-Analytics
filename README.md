@@ -6,3 +6,6 @@ Repository for Data Analytics excersises.
 - LAB 4 - Linear models
 - Lab 5 - Using link functions to create generalized linear models
 - Lab 6 - Model comparison
+
+Diabetes Prediction Project
+This project aims to predict the likelihood of diabetes in the Pima Indian population using Bayesian Logistic Regression.
